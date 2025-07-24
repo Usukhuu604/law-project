@@ -1,0 +1,26 @@
+mutation CreateAppointment($input: CreateAppointmentInput!) {
+  createAppointment(input: $input) {
+    id
+    clientId
+    lawyerId
+    status
+    chatRoomId
+    subscription
+    slot {
+      day
+      startTime
+      endTime
+      booked
+    }
+    specialization {
+      _id
+      lawyerId
+      specializationId
+      categoryName
+      subscription
+      pricePerHour
+    }
+    notes
+    specializationId
+  }
+}
